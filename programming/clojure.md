@@ -87,3 +87,23 @@ ex2_1=> (sample4 "a")
 ```
 
 defは定数の定義、defnが関数の定義？
+
+## if文の書き方
+
+```
+ex2_1=> 
+(defn pos-neg-or-zero
+  "Determines whether or not n is positive, negative, or zero"
+  [n]
+  (cond
+    (< n 0) "negative"
+    (> n 0) "positive"
+    :else "zero"))
+#'ex2_1/negaposi
+ex2_1=> (negaposi 5)
+"positive"
+ex2_1=> (negaposi -1)
+"negative"
+ex2_1=> (negaposi 0)
+"zero"
+```
