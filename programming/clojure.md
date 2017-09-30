@@ -53,3 +53,37 @@ boot repl
 ```
 
 参考：http://d.hatena.ne.jp/fatrow/20100405/1270483781
+
+# defとdefnの違い
+
+defは引数をとらない。
+定義時に呼び出される。
+
+* defの実行結果
+
+```
+ex2_1=> (def sample1 "Hello")
+#'ex2_1/sample1
+ex2_1=> sample1
+"Hello"
+; 引数xを与えるとエラー
+ex2_1=> (def sample2 [x] "Hello")
+
+CompilerException java.lang.RuntimeException: Too many arguments to def, compiling:(/private/var/folders/w2/_5svft1j22b7hn867y2gh4v40000gp/T/form-init5777623528652159598.clj:1:1)
+```
+
+* defnの実行結果
+
+```
+; 引数を与えないとエラー
+ex2_1=> (defn sample3 "Hello")
+IllegalArgumentException Parameter declaration missing  clojure.core/assert-valid-fdecl (core.clj:7181)
+ex2_1=> (defn sample4 [x] "Hello")
+#'ex2_1/sample4
+ex2_1=> sample4
+#function[ex2-1/sample4] ;"Hello"が出力されない
+ex2_1=> (sample4 "a")
+"Hello" ;括弧で囲むと実行結果が出力される
+```
+
+defは定数の定義、defnが関数の定義？
