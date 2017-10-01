@@ -89,6 +89,37 @@ ex2_1=> (sample4 "a")
 defは定数の定義、defnが関数の定義？
 
 ## if文の書き方
+ifを使った書き方、whenを使った書き方、condを使った書き方がある。
+
+```
+user=>
+(defn is-small? [number]
+  (if (< number 100) "yes" "no"))
+
+#'user/is-small?
+
+user=> (is-small? 50)
+"yes"
+user=> (is-small? 200)
+"no"
+```
+
+* whenを使った書き方
+
+(when test 式*)という書き方。
+```
+user=>
+(defn is-small? [number]
+  (when (< number 100) (println "number = " number) "yes"))
+
+#'user/is-small?
+user=> (is-small? 30)
+number =  30
+"yes"
+user=> (is-small? 100)
+nil
+
+```
 
 ```
 ex2_1=> 
@@ -107,3 +138,20 @@ ex2_1=> (negaposi -1)
 ex2_1=> (negaposi 0)
 "zero"
 ```
+
+参考: http://d.hatena.ne.jp/ryoasai/20110604/1307201476
+
+## ローカル束縛
+
+defはグローバル変数を作る。
+関数内のローカル変数的にを定義する際は、letを使う
+
+(let [変数名 値 ...] 処理)
+
+```
+ex2_1=> (let [x 42] println x)
+42
+ex2_1=> (let [x 42 y 100] println (+ x y))
+142
+```
+
