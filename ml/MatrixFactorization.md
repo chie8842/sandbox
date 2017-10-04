@@ -1,6 +1,7 @@
 # Matrix Factorization
 
 交互最小二乗法によるパラメータ最適化
+
 $$
 R \approx P \times Q = \hat{R}
 $$
@@ -109,8 +110,3 @@ $$
 =
 \gamma p_{il} + \lambda q_{lj}
 $$
-
-
-
-
-
