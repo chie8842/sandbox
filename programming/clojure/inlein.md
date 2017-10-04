@@ -47,7 +47,7 @@ $ cal foo.clj
 (-> (first *command-line-args*)
     (Long/parseLong)
     (p/get)
-    println
+    println)
 )```
 
 
