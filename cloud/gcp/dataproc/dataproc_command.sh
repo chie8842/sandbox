@@ -7,5 +7,5 @@ gcloud dataproc \
 --worker-machine-type n1-standard-4 \
 --worker-boot-disk-size 500 \
 --scopes 'https://www.googleapis.com/auth/cloud-platform' \
---project projectname \
+--project rettydpi \
 --initialization-actions 'gs://dataproc_init_scripts/dataproc-initialization-actions-master/jupyter/jupyter.sh','gs://dataproc_init_scripts/dataproc-initialization-actions-master/conda/bootstrap-conda.sh','gs://dataproc_init_scripts/dataproc-initialization-actions-master/conda/install-conda-env.sh','gs://dataproc_init_scripts/setting_python3.sh'
