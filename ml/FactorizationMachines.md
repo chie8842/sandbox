@@ -12,4 +12,8 @@ FMのモデル方程式は線形な時間で計算されるため、直接optimi
 non linearなSVMとは異なり二重の変換を行う必要がなく、  
 support vectorを使うことなく直接モデルパラメータを推定することができる。
 
-Factorization Modelには、
+Factorization Modelには、Matrix Factorization,  並列ファクタ分析、SVD++, PITF, FPMCのような  
+特別なモデルなどのたくさんの異なるモデルがある。  
+これらのモデルの欠点は、一般的な予測タスクには適用できず、特殊な入力データでのみ機能することである。  
+また、FMに関する専門知識のないユーザであっても簡単に適用することができる。
+
