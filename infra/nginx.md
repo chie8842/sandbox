@@ -5,6 +5,11 @@ webサーバ
 
 
 リバースプロキシ
+------
+
+### リバースプロキシ設定のパラメータ
+proxy_set_header
+proxy_http_version
 
 
 resolver
@@ -16,3 +21,5 @@ DNSを指定する。
 Reference
 ---------
 [【nginx】ホスト名指定でのリバプロはresolverをセットで](http://sora33.hatenadiary.com/entry/2017/07/02/002353)
+
+
