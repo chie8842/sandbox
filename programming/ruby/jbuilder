@@ -1,0 +1,7 @@
+# jbuilder
+
+jsonのテンプレートエンジン
+
+Reference
+-------
+[Rails4でJSONを作るならto_jsonよりjbuilder](http://llcc.hatenablog.com/entry/2015/03/07/10312)1
